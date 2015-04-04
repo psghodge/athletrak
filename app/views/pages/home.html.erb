@@ -1,2 +1,7 @@
-<h1> Welcome to AthleTrak </h1>
-<p> Sign up  <%= link_to "here", register_path %> </p>
+<% if user_signed_in? %>
+	<h1> Welcome to AthleTrak </h1>
+<% else %>
+
+	<h1> Welcome to AthleTrak </h1>
+	<p> Sign up  <%= link_to "here", new_user_registration_path%> </p>
+<% end%>
